@@ -8,6 +8,12 @@ class App extends Component {
     userIP: null
   };
 
+  componentDidMount() {
+    axios.get("/getData").then(res => {
+      console.log(res);
+    });
+  }
+
   render() {
     return (
       <div className="App">
