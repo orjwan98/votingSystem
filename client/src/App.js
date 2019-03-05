@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import Post from "./Components/Post";
+import PostContainer from "./Components/PostContainer";
 import axios from "axios";
 
 class App extends Component {
   state = {
-    data: null,
-    userIP: null
+    data: null
   };
 
   componentDidMount() {
@@ -17,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Post />
+        <PostContainer data={this.state.data} />
       </div>
     );
   }
